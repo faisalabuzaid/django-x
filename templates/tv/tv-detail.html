@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<h2>Details about {{ tv.brand }}</h2>
+<h2>Purchaser: {{ tv.purchaser }}</h2>
+<p>{{ tv.size }}</p>
+<a href="{% url 'tv_update' tv.pk %}">+ Update Tv</a>
+<a href="{% url 'tv_delete' tv.pk %}">+ Delete Tv</a>
+
+{% endblock content %}
