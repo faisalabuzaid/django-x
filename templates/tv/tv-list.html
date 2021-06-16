@@ -2,15 +2,8 @@
 
 
 {% block content %}
-
-<a href="{% url 'tv_create' %}">+ New tv</a>
-<ul>
+<h2><a href="{% url 'tv_create' %}"> + New TV </a></h2>
   {% for tv in object_list %}
-  <li>
-    <a href="{% url 'tv_detail' tv.pk %}">{{ tv.brand }}</a>
-  </li>
+    <p><a href="{% url 'tv_detail' tv.pk %}">{{ tv.brand }}</a></p>
   {% endfor %}
-</ul>
-
-
 {% endblock content %}
